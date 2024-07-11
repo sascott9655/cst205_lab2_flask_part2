@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Flask 2</title>
+    {{bootstrap.load_css()}}
+</head>
+<body>
+    <h1>Word</h1>
+    <div class="text-center">
+        <img src="/static/images/eddie_abbew.jpg" alt="new_walk" class="rounded w-50">
+        </div>
+        <div class ="container">
+            <ul>
+                {% for peps in dictionary['people'] %}
+                    {% for f in dictionary['food'] %}
+                    <p> {{peps}} wants you to eat {{ f }}! </p>
+                {% endfor %}
+                {% endfor %}
+             </ul>
+        </div>
+</body>
+</html>
